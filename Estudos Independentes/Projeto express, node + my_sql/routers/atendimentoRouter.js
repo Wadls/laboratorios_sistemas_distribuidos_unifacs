@@ -8,14 +8,8 @@ router.get('/atendimentos', (req,res)=>{
 });
 
 
-router.post('/atendimentos', (req,res)=>{
+router.post('/atendimento', (req,res)=>{
     res.send('Criando Atendimento');
-});
-
-
-router.put('/atendimento/:id', (req,res)=>{
-    const {id} = req.params;
-    res.send(`Atualizando o atendimento ${id}`);
 });
 
 

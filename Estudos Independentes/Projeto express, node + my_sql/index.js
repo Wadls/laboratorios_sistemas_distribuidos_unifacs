@@ -1,6 +1,11 @@
 const express = require('express');
+const router = require('./routers/exporter');
 const app = express();
 const port = 3000;
+const conn = require('./infraestrutura/conexao');
+const tabelas = require('./infraestrutura/tabelas');
+
+tabelas.init(conn);
 
 
 app.listen(port),(error)=>{
@@ -14,3 +19,5 @@ app.listen(port),(error)=>{
 app.get('/',(req,res)=>{
     res.send("<h1>O bixo é bom mesmo né</h1>");
 });
+
+router(app);
