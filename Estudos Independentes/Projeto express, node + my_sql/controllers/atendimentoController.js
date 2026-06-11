@@ -1,9 +1,10 @@
+const atendimentoModel = require('../models/atendimentoModels');
 class AtendimentoController {
-    buscar(){
-        return 'buscando atendimentos';
+    buscar(id){
+        return atendimentoModel.listar(id);
     }
-    criar(){
-        return 'criando atendimentos';
+    criar(novoAtendimento){
+        return atendimentoModel.criar(novoAtendimento);
     }
     autalizar(id){
         return "Alterando atendimento número " + id + "...";

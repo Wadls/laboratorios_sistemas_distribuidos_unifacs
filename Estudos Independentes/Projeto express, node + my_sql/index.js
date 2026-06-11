@@ -5,6 +5,12 @@ const port = 3000;
 const conn = require('./infraestrutura/conexao');
 const tabelas = require('./infraestrutura/tabelas');
 
+router(app,express);
+
+ 
+
+
+//Início do programa + inserção de dados na tabela
 tabelas.init(conn);
 
 
@@ -20,4 +26,3 @@ app.get('/',(req,res)=>{
     res.send("<h1>O bixo é bom mesmo né</h1>");
 });
 
-router(app);
